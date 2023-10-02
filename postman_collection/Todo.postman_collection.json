@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "5ce3341a-2863-4952-85f0-230e025ef7ef",
+		"name": "Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28865789"
+	},
+	"item": [
+		{
+			"name": " http://localhost:8088/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\" : \"Sibasish\",\r\n    \"last_name\" : \"Das\",\r\n    \"email\" : \"dassibasish46@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"confirm_password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
