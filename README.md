@@ -1,4 +1,4 @@
-# todo_apa
+# todo_app
 Todo App
 
 Guide to project setup
