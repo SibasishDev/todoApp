@@ -10,13 +10,13 @@ class authRoute {
     core () {
         this.routes.post('/login',authController.login);
         this.routes.post('/register',authController.register);
+        // this.routes.get('/test-api',authController.testApi);
     }
 
-    getRouter(){
+    getRouters(){
         return this.routes;
     }
 }
-
 
 
 module.exports = new authRoute();

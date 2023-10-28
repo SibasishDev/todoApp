@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const authRouter = require("../routes/auth.route").getRouter();
+const authRouter = require("../routes/auth.route").getRouters();
+const todoRouter = require("../controller/todo/todo.route").getRouters();
 
 class Router {
   constructor() {
@@ -9,6 +10,7 @@ class Router {
 
   core() {
     this.routes.use("/", authRouter);
+    this.routes.use("/todo", todoRouter);
     this.routes.use("*", function (req, res, next) {
       res.json({
         code: 400,

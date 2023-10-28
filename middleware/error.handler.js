@@ -1,5 +1,6 @@
 const errorResponse = require('../utils/errorResponse');
 const errorHandler = (err, req, res, next) => {
+  console.log(err);
     let error = { ...err };
     error.message = err.message;
   
@@ -17,6 +18,10 @@ const errorHandler = (err, req, res, next) => {
     if (err.name === 'AuthorizationError') {
       const message = `${err.message}`;
       error = new errorResponse(message, 401);
+    }
+
+    if(typeof err.code == "string"){
+      error.code = 400;
     }
     // MySQL Parse error
     // if (err.code === 'ER_PARSE_ERROR') {
